@@ -1,4 +1,4 @@
-  package org.junit.testing;
+package org.junit.testing;
 
 import org.junit.After;
 import org.junit.AfterClass;
@@ -54,3 +54,4 @@ public class SampleProject {
 	}
 
 }
+
