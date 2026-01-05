@@ -128,58 +128,6 @@ public class BaseClass {
 			String valueOf=String.valueOf(l);
 		}
 	}
-	public static void createNewExcelFile(int rowNum, int cellNum, String writeData) throws IOException
-	{
-		File f=new File("C:\\Users\\AJITH\\eclipse-workspace\\MavenProject\\Excel\\NewFile.xlsx");
-		Workbook w=new XSSFWorkbook();
-		Sheet newSheet=w.createSheet("Datas");
-		Row newRow=newSheet.createRow(rowNum);
-		Cell newCell=newRow.createCell(cellNum);
-		newCell.setCellValue(writeData);
-		FileOutputStream fos=new FileOutputStream(f);
-		w.write(fos);
-	}
-	
-	public static void createCell(int rowNum, int cellNum, String newData) throws IOException
-	{
-		File f=new File("C:\\Users\\AJITH\\eclipse-workspace\\MavenProject\\Excel\\NewFile.xlsx");
-		FileInputStream fis=new FileInputStream(f);
-		Workbook w=new XSSFWorkbook(fis);
-		Sheet s=w.getSheet("Datas");
-		Row r=s.getRow(rowNum);
-		Cell c=r.createCell(cellNum);
-		c.setCellValue(newData);
-		FileOutputStream fos=new FileOutputStream(f);
-		w.write(fos);
-	}
-	
-	public static void createRow(int creRow, int creCell, String newData) throws IOException
-	{
-		File f=new File("C:\\Users\\AJITH\\eclipse-workspace\\MavenProject\\Excel\\NewFile.xlsx");
-		FileInputStream fis=new FileInputStream(f);
-		Workbook wb=new XSSFWorkbook(fis);
-		Sheet s=wb.getSheet("Datas");
-		Row r=s.createRow(creRow);
-		Cell c=r.createCell(creCell);
-		c.setCellValue(newData);
-		FileOutputStream fos=new FileOutputStream(f);
-		wb.write(fos);
-	}
-	
-	public static void updateDataToParticularCell(int getTheRow, int getTheCell, String exisitingData, String writeNewData) throws IOException
-	{
-		File f=new File("C:\\Users\\AJITH\\eclipse-workspace\\MavenProject\\Excel\\NewFile.xlsx");
-		FileInputStream fis=new FileInputStream(f);
-		Workbook wb=new XSSFWorkbook(fis);
-		Sheet s=wb.getSheet("Datas");
-		Row r=s.getRow(getTheRow);
-		Cell c=r.getCell(getTheCell);
-		String str=c.getStringCellValue();
-		if(str.equals(exisitingData))
-		{
-			c.setCellValue(writeNewData);
-		}
-		FileOutputStream fos=new FileOutputStream(f);
-		wb.write(fos);
 	}
 }
+
