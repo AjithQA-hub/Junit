@@ -52,7 +52,12 @@ public class JUnitChallenge3 extends BaseCls {
 		Assert.assertEquals("Check your Title", true, title.contains("Gmail"));
 		Assert.assertTrue("Check the Url", url.contains("accounts"));
 		
-		//assertTrue(msg,cond)
-		//assertEquals(msg,exp,cond) 
+		//assertTrue(message, condition/Actual)
+		//assertEquals(message, expected, condition/Actual)
+		
+		//Message - should be in string
+		//Expected - should be in boolean that is True/False
+		//Condition - mean what should actually test.
 	}
 }
+
