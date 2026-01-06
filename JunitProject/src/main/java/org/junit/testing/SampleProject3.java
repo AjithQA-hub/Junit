@@ -1,18 +1,10 @@
-package org.junit.testing;
+package org.junit;
 
-//import java.util.Date;
+import java.util.Date;
+import org.base.BaseCls;
+import org.base.FBlogin;
 
-import org.base.BaseClass;
-import org.base.FbLogin;
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Ignore;
-import org.junit.Test;
-
-public class SampleProject3 extends BaseClass {
+public class SampleProject3 extends BaseCls {
 	
 	@Test
 	public void tc3()
@@ -21,18 +13,14 @@ public class SampleProject3 extends BaseClass {
 	}
 	@Before
 	public void startDate() {
-		//Date d=new Date();
-		//System.out.println(d);
-		launchBrowser();
-		windowMaximize();
+		Date d=new Date();
+		System.out.println(d);
 	}
 	@After
 	public void endDate()
 	{
-		//Date d=new Date();
-		//System.out.println(d);
-		//launchBrowser();
-		//windowMaximize();
+		Date d=new Date();
+		System.out.println(d);
 	}
 	@BeforeClass
 	public static void launchTheBrowser()
@@ -44,18 +32,20 @@ public class SampleProject3 extends BaseClass {
 	@AfterClass
 	public static void CloseTheBrowser()
 	{
-		//closeEntireBrowser();
+		closeEntireBrowser();
 	}
 	@Test
 	public void tc1() {
 		System.out.println("Test Case 1");
 		launchUrl("https://en-gb.facebook.com/");
 		String title = pageTitle();
+		System.out.println(title);
 		String url = pageUrl();
-		FbLogin f=new FbLogin();
+		System.out.println(url);
+		FBlogin f=new FBlogin();
 		passText("ajithkumarvam1@gmail.com", f.getEmail());
-		//Assert.assertTrue("check your page Title", title.contains("facebook"));
-		Assert.assertEquals("Check your URL", url, url.contains("facebook"));
+		Assert.assertTrue("check your page Title", title.contains("Facebook"));
+		Assert.assertEquals("Check your URL", true, url.contains("facebook"));
 		passText("Ajith!123", f.getPassword());
 	}
 	@Test
