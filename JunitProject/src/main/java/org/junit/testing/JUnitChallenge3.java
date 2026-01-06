@@ -55,5 +55,4 @@ public class JUnitChallenge3 extends BaseCls {
 		//assertTrue(msg,cond)
 		//assertEquals(msg,exp,cond) 
 	}
-
 }
