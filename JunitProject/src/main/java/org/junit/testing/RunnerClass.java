@@ -18,7 +18,7 @@ public class RunnerClass {
 	@Test
 	public void tc()
 	{
-		Result rc = JUnitCore.runClasses(JUnitChallenge3.java);
+		Result rc = JUnitCore.runClasses(JUnitChallenge3.class);
 		System.out.println("Total Test case Run Count : "+rc.getRunCount());
 		System.out.println("Total Test case Run Time : "+rc.getRunTime());
 		System.out.println("Total Test case Failed Count : "+rc.getFailureCount());
@@ -32,4 +32,5 @@ public class RunnerClass {
 	}
 
 }
+
 
