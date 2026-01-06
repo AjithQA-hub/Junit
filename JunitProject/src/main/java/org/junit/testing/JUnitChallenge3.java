@@ -13,7 +13,7 @@ public class JUnitChallenge3 extends BaseCls {
 	@Test
 	public void tc2()
 	{
-		System.out.println("Test Case 3");
+		System.out.println("Test Case 2");
 	}
 	
 	@Before
@@ -44,10 +44,16 @@ public class JUnitChallenge3 extends BaseCls {
 		System.out.println("Test Case 1");
 		launchUrl("https://mail.google.com/mail/u/0/#inbox");
 		String title = pageTitle();
+		System.out.println("Page Title: " + title);
 		String url = pageUrl();
+		System.out.println("Page Url: " + url);
 		Email e=new Email();
 		passText("ajithkumarvam1@gmail.com", e.getEmail());
-		Assert.assertEquals("Check your URL", url, url.contains("accounts"));
+		Assert.assertEquals("Check your Title", true, title.contains("Gmail"));
+		Assert.assertTrue("Check the Url", url.contains("accounts"));
+		
+		//assertTrue(msg,cond)
+		//assertEquals(msg,exp,cond) 
 	}
 
 }
