@@ -1,36 +1,29 @@
-package org.junit.testing;
+package org.junit;
+
+import java.util.Date;
+
+import org.base.BaseCls;
 
 //import java.util.Date;
 
-import org.base.BaseClass;
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Ignore;
-import org.junit.Test;
-
-public class SampleProject2 extends BaseClass {
+public class SampleProject2 extends BaseCls {
 	
 	@Test
-	public void tc3()
+	public void tc1()
 	{
 		System.out.println("Test Case 3");
 	}
 	@Before
 	public void startDate() {
-		//Date d=new Date();
-		//System.out.println(d);
-		launchBrowser();
-		windowMaximize();
+		Date d=new Date();
+		System.out.println(d);
+		
 	}
 	@After
 	public void endDate()
 	{
-		//Date d=new Date();
-		//System.out.println(d);
-		launchBrowser();
-		windowMaximize();
+		Date d=new Date();
+		System.out.println(d);
 	}
 	@BeforeClass
 	public static void launchTheBrowser()
@@ -45,12 +38,12 @@ public class SampleProject2 extends BaseClass {
 		closeEntireBrowser();
 	}
 	@Test
-	public void tc1() {
+	public void tc2() {
 		System.out.println("Test Case 1");
 		launchUrl("https://en-gb.facebook.com/");
 	}
 	@Test
-	public void tc5() {
+	public void tc3() {
 		System.out.println("Test Case 5");
 		launchUrl("https://www.snapdeal.com/");
 	}
@@ -62,7 +55,7 @@ public class SampleProject2 extends BaseClass {
 		launchUrl("https://www.myntra.com/");
 	}
 	@Test
-	public void tc2() {
+	public void tc5() {
 		System.out.println("Test Case 2");
 		launchUrl("https://www.flipkart.com/");
 		
