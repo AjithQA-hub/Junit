@@ -1,39 +1,31 @@
-package org.junit.testing;
+package org.junit;
+
+import java.util.Date;
 
 //import java.util.Date;
 
-import org.base.BaseClass;
-import org.base.FbLogin;
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Ignore;
-import org.junit.Test;
+import org.base.BaseCls;
+import org.base.Email;
+import org.base.FBlogin;
 
-public class JUnitChallenge3 extends BaseClass {
+public class JUnitChallenge3 extends BaseCls {
 	
 	@Test
-	public void tc3()
+	public void tc2()
 	{
 		System.out.println("Test Case 3");
 	}
 	
 	@Before
 	public void startDate() {
-		//Date d=new Date();
-		//System.out.println(d);
-		launchBrowser();
-		windowMaximize();
+		Date d=new Date();
+		System.out.println(d);
 	}
 	@After
 	public void endDate()
 	{
-		//Date d=new Date();
-		//System.out.println(d);
-		//launchBrowser();
-		//windowMaximize();
+		Date d=new Date();
+		System.out.println(d);
 	}
 	@BeforeClass
 	public static void launchTheBrowser()
@@ -45,7 +37,7 @@ public class JUnitChallenge3 extends BaseClass {
 	@AfterClass
 	public static void CloseTheBrowser()
 	{
-		
+		closeEntireBrowser();
 	}
 	@Test
 	public void tc1() {
@@ -53,10 +45,9 @@ public class JUnitChallenge3 extends BaseClass {
 		launchUrl("https://mail.google.com/mail/u/0/#inbox");
 		String title = pageTitle();
 		String url = pageUrl();
-		FbLogin f=new FbLogin();
-		passText("ajithkumarvam1@gmail.com", f.getEmail());
-		Assert.assertEquals("Check your URL", url, url.contains("Gmail"));
-		//passText("Ajith!123", f.getPassword());
+		Email e=new Email();
+		passText("ajithkumarvam1@gmail.com", e.getEmail());
+		Assert.assertEquals("Check your URL", url, url.contains("accounts"));
 	}
 
 }
