@@ -1,10 +1,7 @@
 package org.junit;
 
 import java.util.Date;
-
 import org.base.BaseCls;
-
-//import java.util.Date;
 
 public class SampleProject2 extends BaseCls {
 	
@@ -62,3 +59,4 @@ public class SampleProject2 extends BaseCls {
 	}
 
 }
+
