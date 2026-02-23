@@ -1,9 +1,6 @@
 package org.junit;
 
 import java.util.Date;
-
-//import java.util.Date;
-
 import org.base.BaseCls;
 import org.base.Email;
 import org.base.FBlogin;
@@ -60,4 +57,5 @@ public class JUnitChallenge3 extends BaseCls {
 		//Condition - mean what should actually test.
 	}
 }
+
 
