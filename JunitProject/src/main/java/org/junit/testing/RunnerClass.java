@@ -31,8 +31,4 @@ public class RunnerClass {
 			System.out.println(fails);   
 		}
 	}
-
 }
-
-
-
