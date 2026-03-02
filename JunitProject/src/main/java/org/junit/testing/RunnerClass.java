@@ -22,7 +22,7 @@ public class RunnerClass {
 		System.out.println("Total Test case Run Count : "+rc.getRunCount());
 		System.out.println("Total Test case Run Time : "+rc.getRunTime());
 		System.out.println("Total Test case Failed Count : "+rc.getFailureCount());
-		System.out.println("Ignored Test Case Count : "+rc.getIgnoreCount());
+		System.out.println("Total Test Case Ingnored Count : "+rc.getIgnoreCount());
 		System.out.println("Total Test case skipped : " + rc.getFailures());
 		
 		List<Failure> f = rc.getFailures();
@@ -32,3 +32,4 @@ public class RunnerClass {
 		}
 	}
 }
+
