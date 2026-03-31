@@ -52,6 +52,4 @@ public class SampleProject {
 	public void tc2() {
 		System.out.println("Test Case 2");
 	}
-
 }
-
