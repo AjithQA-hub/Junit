@@ -1,7 +1,6 @@
 package org.junit.testing;
 
 import java.util.Date;
-
 import org.base.BaseClass;
 import org.junit.After;
 import org.junit.AfterClass;
@@ -57,5 +56,4 @@ public class JUnitChallenge2 extends BaseClass {
 		System.out.println("Test Case 4");
 		launchUrl("https://www.youtube.com/");
 	}
-
 }
