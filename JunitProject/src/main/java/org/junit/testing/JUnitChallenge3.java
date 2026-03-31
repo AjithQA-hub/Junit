@@ -57,5 +57,3 @@ public class JUnitChallenge3 extends BaseCls {
 		//Condition - mean what should actually test.
 	}
 }
-
-
