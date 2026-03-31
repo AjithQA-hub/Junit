@@ -16,6 +16,4 @@ public class A {
 	public void tc22() {
 		System.out.println("Test Case 22");
 	}
-	
-
 }
