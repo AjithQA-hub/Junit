@@ -64,7 +64,5 @@ public class SampleProject3 extends BaseCls {
 	public void tc2() {
 		System.out.println("Test Case 2");
 		launchUrl("https://www.flipkart.com/");
-		
 	}
-
 }
